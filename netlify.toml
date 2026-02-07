@@ -1,4 +1,4 @@
-# Netlify config for Angular frontend (pihuu)
+# Netlify config for Angular frontend (shona)
 [build]
   base = "frontend"
   command = "npm run build"
