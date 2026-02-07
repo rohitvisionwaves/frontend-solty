@@ -1,0 +1,91 @@
+.thank-you-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    perspective: 1200px;
+}
+
+.thank-you-card-3d.glass-box {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(20px);
+    padding: 3.5rem 4rem;
+    border-radius: 40px;
+    box-shadow:
+        0 25px 55px rgba(216, 27, 96, 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+    max-width: 800px;
+    text-align: center;
+    transform-style: preserve-3d;
+    animation: thankYouFadeIn 1.2s ease-out forwards, thankYouFloat 5s ease-in-out 1.2s infinite;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s;
+}
+
+.thank-you-card-3d.glass-box:hover {
+    animation: none;
+    transform: translateY(-10px) rotateX(2deg);
+    box-shadow:
+        0 40px 80px rgba(216, 27, 96, 0.18),
+        0 0 0 1px rgba(255, 255, 255, 0.7) inset;
+}
+
+@keyframes thankYouFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.thank-you-card-3d h1,
+.love-card h1 {
+    font-size: 3.2rem;
+    color: #c2185b;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+.thank-you-card-3d .shyari,
+.love-card .shyari {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.85rem;
+    color: #ad1457;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.thank-you-card-3d .personal-note,
+.love-card .personal-note {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+.btn-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-3d:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 18px 35px rgba(216, 27, 96, 0.4);
+}
+
+.btn-3d:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.fade-in {
+    /* Initial fade-in is combined with float in .thank-you-card-3d.glass-box */
+}
+
+@keyframes thankYouFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

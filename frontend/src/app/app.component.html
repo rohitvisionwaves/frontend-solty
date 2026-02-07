@@ -1,0 +1,19 @@
+<div class="app-background" [class.valentine-hearts]="isValentineDay">
+    <div class="heart-particles" *ngIf="isValentineDay">
+        <div *ngFor="let heart of hearts" class="heart" [style.left]="heart.left" [style.fontSize]="heart.size"
+            [style.animationDelay]="heart.delay" [style.animationDuration]="heart.duration">
+            ❤️
+        </div>
+    </div>
+
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+
+    <button type="button" class="floating-music" (click)="toggleMusic()" [class.playing]="isMusicPlaying"
+            aria-label="Toggle music">
+        <span class="equalizer" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </span>
+    </button>
+</div>

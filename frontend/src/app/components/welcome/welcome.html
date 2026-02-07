@@ -1,0 +1,45 @@
+<div class="welcome-page" [class]="'theme-bg-' + (selectedDay?.theme || 'valentine')">
+  <div class="welcome-container">
+  <p class="open-for-msg" *ngIf="openForDay">{{ openForMessage }}</p>
+  <div class="day-tabs" role="tablist" aria-label="Valentine's Week days">
+    <button
+      *ngFor="let day of allDays"
+      type="button"
+      class="day-tab"
+      [class.active]="selectedDayNum === day.date"
+      [class.today]="currentDayNum === day.date"
+      [class.disabled]="day.date > currentDayNum"
+      [attr.aria-selected]="selectedDayNum === day.date"
+      [attr.aria-disabled]="day.date > currentDayNum"
+      [disabled]="day.date > currentDayNum"
+      (click)="selectDay(day.date)">
+      <span class="tab-day">Day {{ day.date }}</span>
+      <span class="tab-label">{{ day.name }}</span>
+    </button>
+  </div>
+
+  <div *ngIf="selectedDay" class="letter-card" [class]="'theme-' + selectedDay.theme">
+    <div class="day-decorations" aria-hidden="true">
+      <span *ngFor="let f of floatItems" class="day-float">{{ selectedDay.icon }}</span>
+    </div>
+    <div class="letter-inner">
+      <div class="day-visual" [class]="'day-icon-' + selectedDay.theme">
+        <span class="day-emoji">{{ selectedDay.icon }}</span>
+      </div>
+      <p class="day-date">{{ selectedDay.date }}th Feb</p>
+      <h1 class="welcome-title">{{ selectedDay.title }}</h1>
+      <p class="day-message">{{ selectedDay.message }}</p>
+      <p class="opening-shayari">{{ selectedDay.shayari }}</p>
+      <div *ngIf="selectedDay.fullExperience" class="btn-wrap">
+        <span class="btn-glow" aria-hidden="true"></span>
+        <span class="btn-ring" aria-hidden="true"></span>
+        <button type="button" class="btn-start" (click)="start()">
+          <span class="btn-text">Open this for me</span>
+          <span class="btn-heart">♥</span>
+        </button>
+      </div>
+      <p *ngIf="!selectedDay.fullExperience" class="unlock-hint">Full story unlocks on Valentine's Day ♥</p>
+    </div>
+  </div>
+  </div>
+</div>

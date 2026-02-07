@@ -1,0 +1,7 @@
+# Dependencies and build
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+
+# System
+.DS_Store

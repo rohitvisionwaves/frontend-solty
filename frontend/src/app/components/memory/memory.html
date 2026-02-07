@@ -1,0 +1,29 @@
+<div class="memory-container">
+    <h2 class="journey-title">A Journey of Us</h2>
+    <p class="screen-shayari">"Woh pehli mulaqat, woh raat ki baat,<br>Aaj bhi dil mein hai uski har ek yaad.<br>Tum par jo bharosa tha us pal,<br>Wahi ban gaya mere dil ka sabse khoobsurat khayal."</p>
+    <div class="memory-grid">
+        <div *ngFor="let memory of memories; let i = index" class="memory-card-wrapper"
+            (mousemove)="onCardMouseMove($event, i)"
+            (mouseleave)="onCardMouseLeave(i)"
+            [style.transform]="getCardTransform(i)">
+            <div class="memory-card-3d" [style.animationDelay]="i * 0.15 + 's'">
+                <div class="card-outer-glow" aria-hidden="true"></div>
+                <div class="card-inner">
+                    <div class="card-face card-front">
+                        <div class="card-visual-loving">
+                            <div class="memory-heart">♥</div>
+                            <div class="memory-glow"></div>
+                            <div class="card-pattern"></div>
+                        </div>
+                        <p class="card-shayari">{{ memory.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-love-wrap">
+        <span class="btn-glow" aria-hidden="true"></span>
+        <span class="btn-ring" aria-hidden="true"></span>
+        <button type="button" class="btn-primary btn-next" (click)="next()">Next <span class="btn-heart">♥</span></button>
+    </div>
+</div>

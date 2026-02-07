@@ -1,0 +1,711 @@
+/* Loving, light-theme background – soft gradients and gentle pattern */
+.welcome-page {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    min-height: 100vh;
+    background: linear-gradient(165deg, #fff5f8 0%, #ffebf0 25%, #fce4ec 55%, #f8e0e8 85%, #fdf2f6 100%);
+    background-attachment: fixed;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(255, 182, 193, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(255, 192, 203, 0.2) 0%, transparent 45%),
+        repeating-linear-gradient(-35deg, transparent, transparent 20px, rgba(255, 255, 255, 0.4) 20px, rgba(255, 255, 255, 0.4) 21px);
+    animation: themeFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes themeFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.welcome-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 20px 16px 32px;
+    animation: welcomeIn 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+               containerBreath 5s ease-in-out 1.4s infinite;
+}
+
+@keyframes containerBreath {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Loving theme: soft gradient per day with gentle tint – light, warm, romantic */
+.theme-bg-rose {
+    background: linear-gradient(165deg, #fff0f3 0%, #ffebee 30%, #fce4ec 60%, #f8bbd0 100%);
+    background-attachment: fixed;
+    background-image: radial-gradient(circle at 25% 25%, rgba(255, 182, 193, 0.4) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(244, 143, 177, 0.25) 0%, transparent 45%);
+}
+.theme-bg-propose {
+    background: linear-gradient(165deg, #fdf2f8 0%, #fce4ec 35%, #f8bbd9 70%, #f3e5f5 100%);
+    background-attachment: fixed;
+    background-image: radial-gradient(circle at 70% 30%, rgba(233, 30, 99, 0.15) 0%, transparent 45%);
+}
+.theme-bg-chocolate {
+    background: linear-gradient(165deg, #fff8f5 0%, #fbe9e7 35%, #efebe9 70%, #d7ccc8 100%);
+    background-attachment: fixed;
+    background-image: radial-gradient(circle at 30% 60%, rgba(161, 136, 127, 0.2) 0%, transparent 50%);
+}
+.theme-bg-teddy {
+    background: linear-gradient(165deg, #fff5f8 0%, #fce4ec 40%, #f8bbd9 75%, #ffe0e8 100%);
+    background-attachment: fixed;
+    background-image: radial-gradient(circle at 60% 40%, rgba(248, 187, 208, 0.35) 0%, transparent 50%);
+}
+.theme-bg-promise {
+    background: linear-gradient(165deg, #faf5ff 0%, #ede7f6 35%, #e1bee7 65%, #fce4ec 100%);
+    background-attachment: fixed;
+    background-image: radial-gradient(circle at 50% 50%, rgba(186, 104, 200, 0.2) 0%, transparent 55%);
+}
+.theme-bg-hug {
+    background: linear-gradient(165deg, #fff8f5 0%, #fff3e0 35%, #ffe0b2 65%, #ffccbc 100%);
+    background-attachment: fixed;
+    background-image: radial-gradient(circle at 40% 70%, rgba(255, 183, 77, 0.2) 0%, transparent 50%);
+}
+.theme-bg-kiss {
+    background: linear-gradient(165deg, #fff0f5 0%, #fce4ec 40%, #f8bbd9 80%, #f48fb1 100%);
+    background-attachment: fixed;
+    background-image: radial-gradient(circle at 80% 20%, rgba(244, 143, 177, 0.3) 0%, transparent 45%);
+}
+.theme-bg-valentine {
+    background: linear-gradient(165deg, #fff5f8 0%, #ffebee 30%, #fce4ec 60%, #f8bbd9 95%, #ffcdd2 100%);
+    background-attachment: fixed;
+    background-image: radial-gradient(circle at 20% 80%, rgba(255, 64, 129, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255, 182, 193, 0.35) 0%, transparent 45%);
+}
+
+@keyframes bgDrift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes bgPulse {
+    0%, 100% { background-position: 0% 0%; }
+    50% { background-position: 30% 20%; }
+}
+
+/* Message when the page opens: "Opened for 7th Feb · Rose Day ♥" */
+.open-for-msg {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.25rem;
+    color: rgba(173, 20, 87, 0.9);
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    animation: openForFadeIn 0.8s ease-out 0.3s both;
+}
+
+@keyframes openForFadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tabs: all 8 days for direct access and corrections */
+.day-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    max-width: 100%;
+}
+
+.day-tab {
+    padding: 10px 14px;
+    min-width: 44px;
+    border-radius: 12px;
+    border: 2px solid rgba(216, 27, 96, 0.2);
+    background: rgba(255, 255, 255, 0.85);
+    color: #ad1457;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    opacity: 0;
+    transform: translateY(12px) scale(0.95);
+    animation: tabReveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    box-shadow: 0 2px 8px rgba(216, 27, 96, 0.06);
+}
+
+.day-tab:nth-child(1) { animation-delay: 0.1s; }
+.day-tab:nth-child(2) { animation-delay: 0.15s; }
+.day-tab:nth-child(3) { animation-delay: 0.2s; }
+.day-tab:nth-child(4) { animation-delay: 0.25s; }
+.day-tab:nth-child(5) { animation-delay: 0.3s; }
+.day-tab:nth-child(6) { animation-delay: 0.35s; }
+.day-tab:nth-child(7) { animation-delay: 0.4s; }
+.day-tab:nth-child(8) { animation-delay: 0.45s; }
+
+@keyframes tabReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.day-tab:hover {
+    border-color: rgba(216, 27, 96, 0.4);
+    background: rgba(255, 235, 238, 0.95);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 16px rgba(216, 27, 96, 0.12);
+}
+
+.day-tab.active {
+    border-color: rgba(216, 27, 96, 0.5);
+    background: linear-gradient(135deg, #ff4081, #d81b60);
+    color: white;
+    box-shadow: 0 6px 20px rgba(216, 27, 96, 0.35), 0 2px 8px rgba(173, 20, 87, 0.15);
+}
+
+.day-tab.today:not(.active) {
+    border-color: rgba(255, 64, 129, 0.5);
+    box-shadow: 0 0 0 1px rgba(255, 64, 129, 0.3);
+}
+
+/* Disable tabs for future days – only days up to current day are open */
+.day-tab:disabled,
+.day-tab.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    filter: grayscale(0.4);
+}
+
+.tab-day {
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.tab-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+    .tab-label { display: none; }
+    .day-tab { min-width: 40px; padding: 10px; }
+}
+
+@keyframes welcomeIn {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Love letter card – outer card only: emission (glow) here; inner content animation unchanged */
+.letter-card {
+    position: relative;
+    width: 100%;
+    max-width: min(620px, calc(100vw - 32px));
+    margin: 0 auto;
+    padding: clamp(28px, 5vw, 48px) clamp(24px, 4vw, 56px);
+    border-radius: clamp(20px, 4vw, 24px);
+    box-sizing: border-box;
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 240, 245, 0.98) 100%);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.95),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    animation: cardEnter 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both;
+}
+
+/* Outer card: entrance + theme-specific floating effect (teddy=bounce, promise=glow float, etc.) */
+.letter-card.theme-rose {
+    animation: cardEnter 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both, boxFloatRose 5s ease-in-out 1.4s infinite;
+}
+.letter-card.theme-propose {
+    animation: cardEnter 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both, boxFloatPropose 5.2s ease-in-out 1.4s infinite;
+}
+.letter-card.theme-chocolate {
+    animation: cardEnter 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both, boxFloatChocolate 5.5s ease-in-out 1.4s infinite;
+}
+.letter-card.theme-teddy {
+    animation: cardEnter 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both, boxFloatTeddy 4s ease-in-out 1.4s infinite;
+}
+.letter-card.theme-promise {
+    animation: cardEnter 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both, boxFloatPromise 5s ease-in-out 1.4s infinite;
+}
+.letter-card.theme-hug {
+    animation: cardEnter 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both, boxFloatHug 5.2s ease-in-out 1.4s infinite;
+}
+.letter-card.theme-kiss {
+    animation: cardEnter 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both, boxFloatKiss 4.8s ease-in-out 1.4s infinite;
+}
+.letter-card.theme-valentine {
+    animation: cardEnter 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both, boxFloatValentine 5s ease-in-out 1.4s infinite;
+}
+
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Theme-specific box floating: different motion per card (outer box only) */
+@keyframes boxFloatRose {
+    0%, 100% { transform: translateY(0) scale(1) rotate(-0.5deg); }
+    50% { transform: translateY(-12px) scale(1) rotate(0.5deg); }
+}
+@keyframes boxFloatPropose {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-14px) scale(1); }
+}
+@keyframes boxFloatChocolate {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.008); }
+}
+@keyframes boxFloatTeddy {
+    0%, 100% { transform: translateY(0) scale(1); }
+    25% { transform: translateY(-14px) scale(1); }
+    50% { transform: translateY(0) scale(1); }
+    75% { transform: translateY(-7px) scale(1); }
+}
+@keyframes boxFloatPromise {
+    0%, 100% { transform: translateY(0) scale(1); filter: brightness(1); }
+    50% { transform: translateY(-12px) scale(1); filter: brightness(1.02); }
+}
+@keyframes boxFloatHug {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-11px) scale(1.01); }
+}
+@keyframes boxFloatKiss {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1); }
+}
+@keyframes boxFloatValentine {
+    0%, 100% { transform: translateY(0) scale(1) rotate(-0.5deg); }
+    50% { transform: translateY(-14px) scale(1) rotate(0.5deg); }
+}
+
+@keyframes cardSwayRose {
+    0%, 100% { transform: translateY(0) rotate(-2.5deg); }
+    50% { transform: translateY(-14px) rotate(2.5deg); }
+}
+
+@keyframes cardFloatSoft {
+    0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+    50% { transform: translateY(-16px) rotate(1.5deg); }
+}
+
+@keyframes cardShimmer {
+    0%, 100% { transform: translateY(0); box-shadow: 0 25px 60px rgba(93, 64, 55, 0.12); }
+    50% { transform: translateY(-12px); box-shadow: 0 32px 70px rgba(93, 64, 55, 0.22); }
+}
+
+@keyframes cardBounceSoft {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-14px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-7px); }
+}
+
+@keyframes cardGlow {
+    0%, 100% { transform: translateY(0); filter: brightness(1); }
+    50% { transform: translateY(-14px); filter: brightness(1.04); }
+}
+
+@keyframes cardWarmFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-16px) scale(1.012); }
+}
+
+@keyframes cardHeartFloat {
+    0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+    50% { transform: translateY(-18px) rotate(1.5deg); }
+}
+
+/* Emission effect: outer card only – glow around card, no inner card animation change */
+.letter-card::before {
+    content: '';
+    position: absolute;
+    inset: -24px;
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: -1;
+    animation: emissionGlow 4s ease-in-out infinite;
+}
+
+.letter-card.theme-rose::before { background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(194, 24, 91, 0.4) 0%, rgba(233, 30, 99, 0.15) 45%, transparent 70%); }
+.letter-card.theme-propose::before { background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(233, 30, 99, 0.35) 0%, rgba(156, 39, 176, 0.12) 45%, transparent 70%); }
+.letter-card.theme-chocolate::before { background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(121, 85, 72, 0.35) 0%, rgba(161, 136, 127, 0.12) 45%, transparent 70%); }
+.letter-card.theme-teddy::before { background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(248, 187, 208, 0.4) 0%, rgba(244, 143, 177, 0.15) 45%, transparent 70%); }
+.letter-card.theme-promise::before { background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(156, 39, 176, 0.35) 0%, rgba(233, 30, 99, 0.12) 45%, transparent 70%); }
+.letter-card.theme-hug::before { background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255, 152, 0, 0.3) 0%, rgba(244, 143, 177, 0.15) 45%, transparent 70%); }
+.letter-card.theme-kiss::before { background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(244, 143, 177, 0.4) 0%, rgba(233, 30, 99, 0.15) 45%, transparent 70%); }
+.letter-card.theme-valentine::before { background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255, 182, 193, 0.45) 0%, rgba(255, 64, 129, 0.2) 45%, transparent 70%); }
+
+@keyframes emissionGlow {
+    0%, 100% { opacity: 0.6; filter: blur(20px); }
+    50% { opacity: 1; filter: blur(28px); }
+}
+
+/* Floating day decorations (small icons around the card) */
+.day-decorations {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.day-float {
+    position: absolute;
+    font-size: 1.6rem;
+    opacity: 0.5;
+}
+
+.day-float:nth-child(1) { bottom: 15%; left: 8%; animation-delay: 0s; }
+.day-float:nth-child(2) { bottom: 45%; left: 5%; animation-delay: 1s; }
+.day-float:nth-child(3) { bottom: 70%; left: 12%; animation-delay: 2s; }
+.day-float:nth-child(4) { bottom: 25%; right: 10%; left: auto; animation-delay: 0.5s; }
+.day-float:nth-child(5) { bottom: 55%; right: 6%; left: auto; animation-delay: 1.5s; }
+
+/* Floating items: different animation per day (outer card area only; inner content unchanged) */
+.letter-card.theme-rose .day-float { animation: floatRosePetals 5s ease-in-out infinite; }
+.letter-card.theme-propose .day-float { animation: floatProposeRise 4.5s ease-in-out infinite; }
+.letter-card.theme-chocolate .day-float { animation: floatChocolateDrop 4s ease-in-out infinite; }
+.letter-card.theme-teddy .day-float { animation: floatTeddyBounce 3s ease-in-out infinite; }
+.letter-card.theme-promise .day-float { animation: floatPromiseGlow 4.2s ease-in-out infinite; }
+.letter-card.theme-hug .day-float { animation: floatHugSway 4.5s ease-in-out infinite; }
+.letter-card.theme-kiss .day-float { animation: floatKissFloat 4s ease-in-out infinite; }
+.letter-card.theme-valentine .day-float { animation: floatValentineHearts 3.8s ease-in-out infinite; }
+
+@keyframes floatRosePetals {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.5; }
+    33% { transform: translate(8px, -24px) rotate(15deg); opacity: 0.7; }
+    66% { transform: translate(-6px, -42px) rotate(-10deg); opacity: 0.55; }
+}
+
+@keyframes floatProposeRise {
+    0%, 100% { transform: translateY(10px) scale(1); opacity: 0.4; }
+    50% { transform: translateY(-36px) scale(1.1); opacity: 0.7; }
+}
+
+@keyframes floatChocolateDrop {
+    0%, 100% { transform: translateY(-20px) rotate(-5deg) scale(1); opacity: 0.5; }
+    50% { transform: translateY(8px) rotate(8deg) scale(0.95); opacity: 0.65; }
+}
+
+@keyframes floatTeddyBounce {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.5; }
+    25% { transform: translateY(-22px) scale(1.08); opacity: 0.7; }
+    50% { transform: translateY(0) scale(1); opacity: 0.5; }
+    75% { transform: translateY(-12px) scale(1.04); opacity: 0.65; }
+}
+
+@keyframes floatPromiseGlow {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+    50% { transform: translateY(-32px) scale(1.12); opacity: 0.7; }
+}
+
+@keyframes floatHugSway {
+    0%, 100% { transform: translateY(0) rotate(-12deg); opacity: 0.5; }
+    50% { transform: translateY(-30px) rotate(12deg); opacity: 0.7; }
+}
+
+@keyframes floatKissFloat {
+    0%, 100% { transform: translateY(5px) rotate(0deg); opacity: 0.45; }
+    50% { transform: translateY(-28px) rotate(6deg); opacity: 0.65; }
+}
+
+@keyframes floatValentineHearts {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.5; }
+    50% { transform: translateY(-40px) scale(1.15); opacity: 0.75; }
+}
+
+/* Main day icon (large emoji) with theme-specific animation */
+.day-visual {
+    margin-bottom: 0.75rem;
+}
+
+.day-emoji {
+    display: inline-block;
+    font-size: 4rem;
+    line-height: 1;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
+    animation: iconPulse 2.4s ease-in-out infinite;
+}
+
+.letter-card.theme-rose .day-emoji { animation: iconSway 2.2s ease-in-out infinite; }
+.letter-card.theme-propose .day-emoji { animation: iconPulse 2.2s ease-in-out infinite; }
+.letter-card.theme-chocolate .day-emoji { animation: iconSparkle 2.5s ease-in-out infinite; }
+.letter-card.theme-teddy .day-emoji { animation: iconBounce 1.8s ease-in-out infinite; }
+.letter-card.theme-promise .day-emoji { animation: iconGlow 2.6s ease-in-out infinite; }
+.letter-card.theme-hug .day-emoji { animation: iconPulse 2.3s ease-in-out infinite; }
+.letter-card.theme-kiss .day-emoji { animation: iconSway 2.4s ease-in-out infinite; }
+.letter-card.theme-valentine .day-emoji { animation: iconHeartbeat 1.2s ease-in-out infinite; }
+
+@keyframes iconSway {
+    0%, 100% { transform: rotate(-8deg) scale(1); }
+    50% { transform: rotate(8deg) scale(1.12); }
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.18); opacity: 0.95; }
+}
+
+@keyframes iconSparkle {
+    0%, 100% { transform: scale(1); filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08)); }
+    50% { transform: scale(1.15); filter: drop-shadow(0 8px 24px rgba(210,105,30,0.35)); }
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    25% { transform: translateY(-12px) scale(1.1); }
+    50% { transform: translateY(0) scale(1); }
+    75% { transform: translateY(-6px) scale(1.05); }
+}
+
+@keyframes iconGlow {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.12); opacity: 0.92; }
+}
+
+@keyframes iconHeartbeat {
+    0%, 100% { transform: scale(1); }
+    14% { transform: scale(1.25); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.2); }
+    70% { transform: scale(1); }
+}
+
+.letter-inner {
+    position: relative;
+}
+
+.day-date {
+    font-size: 0.95rem;
+    color: #ad1457;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.day-message {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: #555;
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto 1.25rem;
+}
+
+.welcome-title {
+    position: relative;
+    font-size: clamp(2rem, 6vw, 3.6rem);
+    color: #d81b60;
+    margin-bottom: 1.75rem;
+    text-shadow: 2px 2px 15px rgba(216, 27, 96, 0.25);
+}
+
+.opening-shayari {
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    color: #ad1457;
+    line-height: 1.85;
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+    opacity: 0.95;
+    white-space: pre-line;
+}
+
+.unlock-hint {
+    font-size: 0.95rem;
+    color: rgba(173, 20, 87, 0.75);
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+/* Interactive love button */
+.btn-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-glow {
+    position: absolute;
+    inset: -14px;
+    background: radial-gradient(circle, rgba(255, 64, 129, 0.35) 0%, transparent 72%);
+    border-radius: 60px;
+    animation: btnPulse 2.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes btnPulse {
+    0%, 100% { opacity: 0.5; transform: scale(1.12); }
+    50% { opacity: 0.95; transform: scale(1.25); }
+}
+
+.btn-ring {
+    position: absolute;
+    inset: -8px;
+    border: 2px solid rgba(216, 27, 96, 0.25);
+    border-radius: 56px;
+    pointer-events: none;
+    animation: ringPulse 3s ease-in-out infinite;
+}
+
+@keyframes ringPulse {
+    0%, 100% { opacity: 0.4; transform: scale(1.05); }
+    50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+.btn-start {
+    position: relative;
+    overflow: visible;
+    background: linear-gradient(180deg, #ff4081 0%, #d81b60 50%, #ad1457 100%);
+    color: white;
+    border: none;
+    padding: 18px 42px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 10px 28px rgba(216, 27, 96, 0.45),
+                0 5px 0 rgba(173, 20, 87, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    transform: translateZ(0);
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.25s ease;
+}
+
+.btn-start:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 20px 45px rgba(216, 27, 96, 0.5),
+                0 10px 0 rgba(173, 20, 87, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.btn-start:active {
+    transform: translateY(-2px) scale(0.98);
+    box-shadow: 0 8px 22px rgba(216, 27, 96, 0.45),
+                0 2px 0 rgba(173, 20, 87, 0.4),
+                inset 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.btn-text {
+    letter-spacing: 0.04em;
+}
+
+.btn-heart {
+    font-size: 1.35em;
+    opacity: 0.95;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-start:hover .btn-heart {
+    animation: heartBeat 0.7s ease-in-out;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.3); }
+    50% { transform: scale(1.1); }
+    75% { transform: scale(1.25); }
+}
+
+.welcome-container {
+    cursor: default;
+}
+
+.btn-start {
+    cursor: pointer;
+}
+
+/* Light theme / looking colors per day – card only (inner content animation unchanged) */
+/* Day 1 – Rose: deep red look on light */
+.letter-card.theme-rose {
+    background: linear-gradient(160deg, #fff5f5 0%, #ffebee 45%, #fce4ec 90%, #f8bbd0 100%);
+    box-shadow: 0 20px 50px rgba(194, 24, 91, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+.letter-card.theme-rose .welcome-title,
+.letter-card.theme-rose .day-date { color: #b71c1c; }
+.letter-card.theme-rose .opening-shayari { color: #ad1457; }
+.letter-card.theme-rose .day-message { color: #4e342e; }
+
+/* Day 2 – Propose: soft romantic pink */
+.letter-card.theme-propose {
+    background: linear-gradient(160deg, #fce4ec 0%, #f8bbd9 50%, #f3e5f5 100%);
+    box-shadow: 0 20px 50px rgba(233, 30, 99, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+.letter-card.theme-propose .welcome-title,
+.letter-card.theme-propose .day-date { color: #ad1457; }
+.letter-card.theme-propose .opening-shayari { color: #880e4f; }
+
+/* Day 3 – Chocolate: warm brown on cream */
+.letter-card.theme-chocolate {
+    background: linear-gradient(160deg, #fff8f0 0%, #fbe9e7 40%, #efebe9 80%, #d7ccc8 100%);
+    box-shadow: 0 20px 50px rgba(93, 64, 55, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+.letter-card.theme-chocolate .welcome-title,
+.letter-card.theme-chocolate .day-date { color: #5d4037; }
+.letter-card.theme-chocolate .day-message { color: #4e342e; }
+.letter-card.theme-chocolate .opening-shayari { color: #6d4c41; }
+
+/* Day 4 – Teddy: light pastel pink */
+.letter-card.theme-teddy {
+    background: linear-gradient(160deg, #fce4ec 0%, #f8bbd9 35%, #ffe0e8 70%, #f3e5f5 100%);
+    box-shadow: 0 20px 50px rgba(191, 95, 130, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+.letter-card.theme-teddy .welcome-title,
+.letter-card.theme-teddy .day-date { color: #bf5f82; }
+.letter-card.theme-teddy .opening-shayari { color: #ad1457; }
+
+/* Day 5 – Promise: light purple to pink */
+.letter-card.theme-promise {
+    background: linear-gradient(160deg, #ede7f6 0%, #e1bee7 40%, #fce4ec 80%, #f8bbd9 100%);
+    box-shadow: 0 20px 50px rgba(123, 31, 162, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+.letter-card.theme-promise .welcome-title,
+.letter-card.theme-promise .day-date { color: #7b1fa2; }
+.letter-card.theme-promise .opening-shayari { color: #6a1b9a; }
+
+/* Day 6 – Hug: light warm pink */
+.letter-card.theme-hug {
+    background: linear-gradient(160deg, #fff3e0 0%, #ffe0b2 35%, #ffccbc 70%, #f8bbd9 100%);
+    box-shadow: 0 20px 50px rgba(230, 81, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+.letter-card.theme-hug .welcome-title,
+.letter-card.theme-hug .day-date { color: #e91e63; }
+.letter-card.theme-hug .opening-shayari { color: #ad1457; }
+
+/* Kiss Day – light pink */
+.letter-card.theme-kiss {
+    background: linear-gradient(160deg, #fce4ec 0%, #f8bbd9 50%, #f48fb1 100%);
+    box-shadow: 0 20px 50px rgba(244, 143, 177, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+.letter-card.theme-kiss .welcome-title,
+.letter-card.theme-kiss .day-date { color: #d81b60; }
+.letter-card.theme-kiss .opening-shayari { color: #ad1457; }
+
+/* Valentine's Day – full romantic light pink */
+.letter-card.theme-valentine {
+    background: linear-gradient(160deg, #fff8f9 0%, #ffebee 45%, #fce4ec 85%, #f8bbd9 100%);
+    box-shadow: 0 20px 50px rgba(216, 27, 96, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+.letter-card.theme-valentine .welcome-title,
+.letter-card.theme-valentine .day-date { color: #d81b60; }
+.letter-card.theme-valentine .opening-shayari { color: #ad1457; }

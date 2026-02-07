@@ -1,0 +1,24 @@
+<div class="proposal-container">
+    <div *ngIf="!response" class="proposal-box">
+        <div class="heart-pulse">❤️</div>
+        <p class="explain-shayari">Dil ka sawaal, sirf ek baar—<br>Isi pal ki raah dekhe nazaara.</p>
+        <h1>On this Valentine’s Day,<br>Will you be my Valentine?</h1>
+        <p class="shyari-intro">"Na jaane kab tum meri zarurat ban gayi,<br>Har khushi ki wajah aur aadat ban gayi.<br>Aaj bas itna sa sawaal hai dil se,<br>Kya tum meri Valentine banogi?"</p>
+        <div class="btn-group">
+            <button type="button" class="btn-primary" (click)="respond('yes')">Yes <span class="btn-heart">♥</span></button>
+            <button class="btn-secondary" (click)="respond('no')">Let’s stay best friends 🙂</button>
+        </div>
+    </div>
+
+    <div *ngIf="response === 'yes'" class="response-box fade-in">
+        <h2>You just made me the happiest person. ❤️</h2>
+        <p class="shyari-response">"Mera dil, meri jaan, sab tumhare liye,<br>Ab har pal har lamha hum saath jiye."</p>
+      
+    </div>
+
+    <div *ngIf="response === 'no'" class="response-box fade-in">
+        <h2>Thank you for being honest.<br>Our friendship will always be special.</h2>
+        <p class="shyari-response">"Dosti hi sahi, par sath toh hoga,<br>Mere dil mein hamesha tumhara naam hoga."</p>
+    
+    </div>
+</div>

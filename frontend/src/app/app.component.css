@@ -1,0 +1,82 @@
+.app-background {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+main {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Floating music button – bottom-right, loving theme, advanced animation */
+.floating-music {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 100;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(145deg, #ffebf0 0%, #fce4ec 50%, #f8bbd9 100%);
+    box-shadow: 0 6px 20px rgba(216, 27, 96, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    animation: floatingPulse 4s ease-in-out infinite;
+}
+
+.floating-music:hover {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 10px 28px rgba(216, 27, 96, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.7);
+    animation: none;
+}
+
+.floating-music:active {
+    transform: scale(0.98);
+}
+
+@keyframes floatingPulse {
+    0%, 100% { transform: translateY(0); box-shadow: 0 6px 20px rgba(216, 27, 96, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.6); }
+    50% { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(216, 27, 96, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.6); }
+}
+
+.equalizer {
+    display: flex;
+    align-items: flex-end;
+    height: 20px;
+    gap: 4px;
+}
+
+.equalizer span {
+    width: 5px;
+    background: linear-gradient(180deg, #d81b60 0%, #ad1457 100%);
+    border-radius: 3px;
+    transition: transform 0.2s ease;
+}
+
+.equalizer span:nth-child(1) { height: 10px; }
+.equalizer span:nth-child(2) { height: 18px; }
+.equalizer span:nth-child(3) { height: 13px; }
+
+.floating-music.playing .equalizer span:nth-child(1) {
+    animation: eqBar 0.6s ease-in-out infinite alternate;
+}
+.floating-music.playing .equalizer span:nth-child(2) {
+    animation: eqBar 0.5s ease-in-out 0.15s infinite alternate;
+}
+.floating-music.playing .equalizer span:nth-child(3) {
+    animation: eqBar 0.55s ease-in-out 0.3s infinite alternate;
+}
+
+@keyframes eqBar {
+    0% { transform: scaleY(0.4); }
+    100% { transform: scaleY(1.15); }
+}
