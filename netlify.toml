@@ -1,4 +1,4 @@
-# Netlify config for Angular frontend (solty)
+# Netlify config for Angular frontend (palak)
 [build]
   base = "frontend"
   command = "npm run build"

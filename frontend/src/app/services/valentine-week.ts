@@ -34,7 +34,7 @@ export const VALENTINE_WEEK_DAYS: ValentineDay[] = [
     theme: 'rose',
     icon: '🌹',
     title: 'Happy Rose Day',
-    message: 'A rose for you, Solty—like our bond, beautiful and true.',
+    message: 'A rose for you, palak—like our bond, beautiful and true.',
     shayari: 'Ek gulaab ki tarah ho tum,\nKhushbu se bhari har baat ho tum,\nZindagi ki har subah mein,\nMeri pehli muskurahat ho tum.',
     fullExperience: false
   },
@@ -44,7 +44,7 @@ export const VALENTINE_WEEK_DAYS: ValentineDay[] = [
     theme: 'propose',
     icon: '💝',
     title: 'Happy Propose Day',
-    message: 'A friendly question from the heart—will you be my special buddy, Solty?',
+    message: 'A friendly question from the heart—will you be my special buddy, palak?',
     shayari: 'Dosti se badhkar kuch ho na ho,\nPar tum sa koi dost bhi nahi.\nAgar dil ki suno ek pal ke liye,\nKya tum meri special buddy banogi?',
     fullExperience: false
   },
@@ -54,7 +54,7 @@ export const VALENTINE_WEEK_DAYS: ValentineDay[] = [
     theme: 'chocolate',
     icon: '🍫',
     title: 'Happy Chocolate Day',
-    message: 'You’re sweeter than chocolate, Solty. Here’s to our sweet bond.',
+    message: 'You’re sweeter than chocolate, palak. Here’s to our sweet bond.',
     shayari: 'Chocolate se bhi zyada meethi ho tum,\nHar baat mein ek mithaas ho tum,\nZindagi ke har taste mein,\nMeri favourite sweet si yaad ho tum.',
     fullExperience: false
   },
@@ -64,7 +64,7 @@ export const VALENTINE_WEEK_DAYS: ValentineDay[] = [
     theme: 'teddy',
     icon: '🧸',
     title: 'Happy Teddy Day',
-    message: 'Like a teddy, you make every day soft and warm. Thank you, Solty.',
+    message: 'Like a teddy, you make every day soft and warm. Thank you, palak.',
     shayari: 'Ek teddy ki tarah soft ho tum,\nHar pal mein ek comfort ho tum,\nJab bhi udaas ho dil mera,\nMeri sabse pyari smile ho tum.',
     fullExperience: false
   },
@@ -74,7 +74,7 @@ export const VALENTINE_WEEK_DAYS: ValentineDay[] = [
     theme: 'promise',
     icon: '💜',
     title: 'Happy Promise Day',
-    message: 'I promise to always be there for you, Solty. Today and every day.',
+    message: 'I promise to always be there for you, palak. Today and every day.',
     shayari: 'Na zyada vaade, na badi baat,\nBas itna sa wada hai saath.\nMuskurahat ka reason banunga,\nJab tak rahegi dil mein yeh baat.',
     fullExperience: false
   },
@@ -84,7 +84,7 @@ export const VALENTINE_WEEK_DAYS: ValentineDay[] = [
     theme: 'hug',
     icon: '🤗',
     title: 'Happy Hug Day',
-    message: 'Sending you a warm hug across the miles. You mean the world, Solty.',
+    message: 'Sending you a warm hug across the miles. You mean the world, palak.',
     shayari: 'Ek hug mein jo sukoon milta hai,\nWoh lafzon mein kaha milta hai.\nKabhi paas ho ya door sahi,\nDil ka connection wahi milta hai.',
     fullExperience: false
   },
@@ -94,7 +94,7 @@ export const VALENTINE_WEEK_DAYS: ValentineDay[] = [
     theme: 'kiss',
     icon: '💋',
     title: 'Happy Kiss Day',
-    message: 'To the one who makes my heart skip a beat. Happy Kiss Day, Solty.',
+    message: 'To the one who makes my heart skip a beat. Happy Kiss Day, palak.',
     shayari: 'Pyaar ki mithas, ehsaas ki gehraai,\nKiss Day pe tumhe dil se salaam bheja hai.',
     fullExperience: false
   },
@@ -104,7 +104,7 @@ export const VALENTINE_WEEK_DAYS: ValentineDay[] = [
     theme: 'valentine',
     icon: '❤️',
     title: "Happy Valentine's Day",
-    message: 'Hello Solty, I have something for you. Will you be my Valentine?',
+    message: 'Hello palak, I have something for you. Will you be my Valentine?',
     shayari: 'Dosti se shuru hui yeh kahani,\nPata hi nahi chala kab dil ki zubani ban gayi.\nHar mulaqat ek yaad ban gayi,\nAur tum meri zindagi ki aadat ban gayi.',
     fullExperience: true
   }
